@@ -1,5 +1,5 @@
-const Discord = require("discord.js")
-const config = require("./config.json")
+const Discord = require('discord.js')
+const config = require('./config.json')
 const bot = new Discord.Client();
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -9,11 +9,11 @@ const registerCmds = new RegisterCommands('./commands', ['general', 'misc', 'mod
 const Gamedig = require('gamedig');
 registerCmds.init();
 
-client.on("ready", () => {
-  console.log("General Commands Ready");
-  console.log("Miscellaneous Commands Ready");
-  console.log("Moderation Commands Ready");
-  console.log("Bot is online!");
+client.on('ready', () => {
+  console.log('General Commands Ready');
+  console.log('Miscellaneous Commands Ready');
+  console.log('Moderation Commands Ready');
+  console.log('Bot is online!');
 
   setInterval(async () => {
     try {
@@ -37,8 +37,8 @@ client.on("ready", () => {
 });
 
 
-client.on("message", message => {
-  const args = message.content.slice(config.prefix.length).split(" ");
+client.on('message', message => {
+  const args = message.content.slice(config.prefix.length).split(' ');
   const command = args.shift();
   const commandFile = client.commands.get(command) || client.commands.get(client.aliases.get(command));
 
