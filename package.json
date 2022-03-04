@@ -9,7 +9,7 @@
   "author": "Ned from {TheSourceCode}",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.3.2",
+    "discord.js": "^11.6.4",
     "fs": "0.0.1-security",
     "gamedig": "^4.0.2",
     "ms": "^2.1.1",
